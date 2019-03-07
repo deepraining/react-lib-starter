@@ -1,1 +1,1 @@
-# react-lib-starter
+# react-lib-starter (in developing)
