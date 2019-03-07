@@ -1,7 +1,7 @@
 {
   "name": "react-lib-starter",
   "version": "0.1.0",
-  "description": "React Lib Starter - A boilerplate for creating a React library, using Webpack and Storybook.",
+  "description": "React Lib Starter - A boilerplate for creating a React library, using Storybook.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "author": "senntyou <jiangjinbelief@163.com>",
@@ -13,11 +13,15 @@
   },
   "keywords": [
     "react",
+    "lib",
     "library",
     "starter",
     "boilerplate",
+    "storybook",
     "webpack",
-    "storybook"
+    "gulp",
+    "jest",
+    "enzyme"
   ],
   "bugs": {
     "url": "https://github.com/senntyou/react-lib-starter/issues"
