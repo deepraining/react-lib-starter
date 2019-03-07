@@ -27,14 +27,16 @@ gulp.task('babel:lib', () =>
     .src('src/**/*.{js,jsx}')
     .pipe(
       babel({
+        babelrc: false,
+        configFile: false,
         presets: [
           ['@babel/preset-env', { modules: 'cjs' }],
           '@babel/preset-react',
           '@babel/preset-flow',
         ],
         plugins: [
+          '@babel/plugin-proposal-class-properties',
           '@babel/plugin-transform-react-jsx',
-          '@babel/plugin-syntax-dynamic-import',
           '@babel/plugin-transform-runtime',
         ],
       }),
@@ -47,14 +49,16 @@ gulp.task('babel:es', () =>
     .src('src/**/*.{js,jsx}')
     .pipe(
       babel({
+        babelrc: false,
+        configFile: false,
         presets: [
           ['@babel/preset-env', { modules: false }],
           '@babel/preset-react',
           '@babel/preset-flow',
         ],
         plugins: [
+          '@babel/plugin-proposal-class-properties',
           '@babel/plugin-transform-react-jsx',
-          '@babel/plugin-syntax-dynamic-import',
           '@babel/plugin-transform-runtime',
         ],
       }),
