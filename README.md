@@ -43,6 +43,6 @@ By default, styles use `less` language, if you want to use `scss` language, you 
 }
 ```
 
-## Note
+## Notes
 
 - `.js` files only for pure JavaScript, and `.jsx` for React components.
