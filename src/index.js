@@ -1,8 +1,3 @@
 // @flow
-export { double, triple } from './extra';
-
-function square(n: number): number {
-  return n * n;
-}
-
-export default square;
+export { default as Hello } from './components/Hello';
+export { default as Welcome } from './components/Welcome';

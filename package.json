@@ -31,14 +31,14 @@
     "precommit": "npm run lint-staged",
     "lint-staged": "lint-staged",
     "prettier": "prettier --write \"./**/*.{js,jsx,css,less,scss,sass,html,md,json}\"",
-    "eslint": "eslint \"./**/*.js\"",
-    "eslint:fix": "eslint \"./**/*.js\" --fix",
-    "eslint-jsx": "eslint \"./**/*.jsx\" -c .eslintrc.jsx.js",
-    "eslint-jsx:fix": "eslint \"./**/*.jsx\" -c .eslintrc.jsx.js --fix",
+    "eslint": "eslint \"./**/*.{js,jsx}\"",
+    "eslint:fix": "eslint \"./**/*.{js,jsx}\" --fix",
     "stylelint": "stylelint \"./**/*.{css,less,scss,sass}\"",
     "stylelint:fix": "stylelint \"./**/*.{css,less,scss,sass}\" --fix",
     "flow": "flow",
     "flow:check": "flow check",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
     "build": "",
     "prepublishOnly": "npm run build",
     "pretest": "npm run build",
@@ -54,7 +54,12 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.0.0",
+    "@storybook/addon-links": "^5.0.0",
+    "@storybook/addons": "^5.0.0",
+    "@storybook/react": "^5.0.0",
     "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
     "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -77,13 +82,8 @@
     "stylelint-config-standard": "^18.2.0"
   },
   "lint-staged": {
-    "**/*.js": [
+    "**/*.{js,jsx}": [
       "eslint --fix",
-      "prettier --write",
-      "git add"
-    ],
-    "**/*.jsx": [
-      "eslint -c .eslintrc.jsx.js --fix",
       "prettier --write",
       "git add"
     ],
@@ -99,5 +99,9 @@
   },
   "engines": {
     "node": ">=8.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   }
 }

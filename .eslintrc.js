@@ -2,10 +2,11 @@ module.exports = {
   root: true,
   parser: 'babel-eslint',
   extends: [
-    'airbnb-base',
+    'airbnb',
     'plugin:flowtype/recommended',
     'prettier',
     'prettier/flowtype',
+    'prettier/react',
   ],
   plugins: ['prettier', 'import', 'node', 'jest', 'flowtype'],
   env: {
@@ -13,6 +14,10 @@ module.exports = {
     es6: true,
     browser: true,
     jest: true,
+  },
+  rules: {
+    'react/forbid-prop-types': 'off',
+    'react/prefer-stateless-function': 'off',
   },
   parserOptions: {
     ecmaVersion: 2017,
