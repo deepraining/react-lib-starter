@@ -50,7 +50,7 @@
     "build:es": "gulp babel:es",
     "build": "npm run clean && npm run build:styles && npm run build:lib && npm run build:es",
     "clean": "rimraf lib es",
-    "prepublishOnly": "npm run build",
+    "prepublish": "npm run build",
     "test": "jest",
     "test-watch": "jest --watch --notify",
     "test-cover": "jest --coverage",
