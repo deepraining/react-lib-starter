@@ -1,40 +1,42 @@
 # react-lib-starter
 
-React Lib Starter - A boilerplate for creating a React library, using Storybook.
+[English Documentation](./README.en.md)
 
-## Getting started
+一个用于快速创建 React 组件库的模板脚手架，使用 Storybook 构建.
+
+## 快速开始
 
 ```
 git clone https://github.com/senntyou/react-lib-starter.git --depth=1
 
 cd react-lib-starter
 
-npm install             # install dependencies
+npm install             # 安装依赖
 
-npm run storybook       # develop using storybook
+npm run storybook       # 使用 storybook 开发组件
 
-npm run build           # build distribution files
+npm run build           # 构建发布文件
 ```
 
-## Features
+## 特性
 
-- [less](http://lesscss.org/), [scss](https://sass-lang.com/) style languages support.
-- [Flow](https://flow.org/) syntax, [jest](https://jestjs.io/en/) + [enzyme](https://github.com/airbnb/enzyme) test support.
-- Using [storybook](https://storybook.js.org/) to develop, preview, deploy static site.
+- [less](http://lesscss.org/), [scss](https://sass-lang.com/) 样式语言支持.
+- [Flow](https://flow.org/) 语法, [jest](https://jestjs.io/en/) + [enzyme](https://github.com/airbnb/enzyme) 测试支持.
+- 使用 [storybook](https://storybook.js.org/) 开发、预览组件.
 
-## Project
+## 项目
 
 ```
 - src
-  - index.{js,jsx}           # js entry file
+  - index.{js,jsx}           # js 入口文件
   - styles
-    - index.{less,scss}      # style entry file
+    - index.{less,scss}      # 样式入口文件
 
 - .storybook                 # for storybook
 - stories                    # for storybook
 ```
 
-By default, styles use `less` language, if you want to use `scss` language, you should modify `package.json` by:
+样式默认使用 `less` 语言, 如果你想使用 `scss` 语言, 可以修改 `package.json`:
 
 ```
 "scripts": {
@@ -43,6 +45,6 @@ By default, styles use `less` language, if you want to use `scss` language, you 
 }
 ```
 
-## Notes
+## 注意
 
-- `.js` files only for pure JavaScript, and `.jsx` for React components.
+- `.js` 文件只能用于写纯 JavaScript 代码, `.jsx` 才能用来写 React 组件代码.
